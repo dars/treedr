@@ -1,8 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf8">
-<title>加州國際-首頁</title>
+<meta charset="utf8">
+<title>加州國際 - {page_title}</title>
 <script type="text/javascript">
 <!--
 function MM_preloadImages() { //v3.0
@@ -46,7 +46,7 @@ body {
 				<td width="298"><img src="<?=site_url('public/images/logo.jpg')?>" width="298" height="131"></td>
 				<td><table width="602" cellspacing="0" cellpadding="0">
 					<tr>
-						<td height="41" align="right"><span class="link01"><a href="index.htm" class="link01">首頁</a> ︱ <a href="02about.html" class="link01">關於我們</a> ︱ <a href="10link.html" class="link01">友善連結</a> ︱ <a href="11contact.html" class="link01">聯絡我們</a> ︱ <a href="12sitmap.html" class="link01">網站地圖</a> ︱ <a href="09relevant.html" class="link01">相關規定法令</a></span>　</td>
+						<td height="41" align="right"><span class="link01"><a href="index.htm" class="link01">首頁</a> ︱ <a href="<?=site_url('nodes/aboutus');?>" class="link01">關於我們</a> ︱ <a href="10link.html" class="link01">友善連結</a> ︱ <a href="11contact.html" class="link01">聯絡我們</a> ︱ <a href="12sitmap.html" class="link01">網站地圖</a> ︱ <a href="<?=site_url('nodes/relevant')?>" class="link01">相關規定法令</a></span>　</td>
 					</tr>
 					<tr>
 						<td height="59"><table width="602" cellspacing="0" cellpadding="0">
@@ -88,7 +88,7 @@ body {
 				<td><img src="<?=site_url('public/images/m-pic01.jpg')?>" width="900" height="154"></td>
 			</tr>
 			<tr>
-				<td height="20" align="center" class="link01"><a href="index.htm" class="link01">首頁</a> ∣ <a href="01news.html" class="link01">最新消息</a> ∣ <a href="02about.html" class="link01">關於我們</a> ∣ <a href="03service.html" class="link01">服務項目</a> ∣ <a href="04defend.html" class="link01">樹木醫生</a> ∣ <a href="05reference.html" class="link01">專案展示</a> ∣ <a href="06event.html" class="link01">活動講座</a> ∣ <a href="07know.html" class="link01">樹木知識</a> ∣ <a href="08faq.html" class="link01">我要提問</a> ∣ <a href="09relevant.html" class="link01">相關規定法令</a> ∣ <a href="10link.html" class="link01">友善連結</a> ∣ <a href="11contact.html" class="link01">聯絡我們</a> ∣ <a href="12sitmap.html" class="link01">網站地圖</a></td>
+				<td height="20" align="center" class="link01"><a href="index.htm" class="link01">首頁</a> ∣ <a href="01news.html" class="link01">最新消息</a> ∣ <a href="<?=site_url('nodes/aboutus');?>" class="link01">關於我們</a> ∣ <a href="03service.html" class="link01">服務項目</a> ∣ <a href="04defend.html" class="link01">樹木醫生</a> ∣ <a href="05reference.html" class="link01">專案展示</a> ∣ <a href="06event.html" class="link01">活動講座</a> ∣ <a href="07know.html" class="link01">樹木知識</a> ∣ <a href="08faq.html" class="link01">我要提問</a> ∣ <a href="<?=site_url('nodes/relevant')?>" class="link01">相關規定法令</a> ∣ <a href="10link.html" class="link01">友善連結</a> ∣ <a href="11contact.html" class="link01">聯絡我們</a> ∣ <a href="12sitmap.html" class="link01">網站地圖</a></td>
 			</tr>
 			<tr>
 				<td height="80" align="center"><span class="copyright">加州國際股份有限公司　2010 &copy; 版權所有</span><br>
@@ -101,5 +101,6 @@ body {
 		</table></td>
 	</tr>
 </table>
+<p id="page_render_time"><br />Page rendered in {elapsed_time} seconds</p>
 </body>
 </html>

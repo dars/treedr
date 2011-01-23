@@ -133,3 +133,11 @@ body {
 	color: #FF3300;
 	text-decoration: underline;
 }
+#page_render_time{
+	text-align:center;
+	color:#CCC;
+	font-size:10px;
+}
+.page_content{
+	padding-left:20px;
+}

@@ -1,23 +1,4 @@
-<html>
-<head>
-<title>Welcome to CodeIgniter</title>
-
 <style type="text/css">
-
-body {
- background-color: #fff;
- margin: 40px;
- font-family: Lucida Grande, Verdana, Sans-serif;
- font-size: 14px;
- color: #4F5155;
-}
-
-a {
- color: #003399;
- background-color: transparent;
- font-weight: normal;
-}
-
 h1 {
  color: #444;
  background-color: transparent;
@@ -40,7 +21,7 @@ code {
 }
 
 </style>
-</head>
+
 <body>
 
 <h1>Welcome to CodeIgniter!</h1>
@@ -54,9 +35,6 @@ code {
 <code>system/application/controllers/welcome.php</code>
 
 <p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
-
-
-<p><br />Page rendered in {elapsed_time} seconds</p>
 
 </body>
 </html>

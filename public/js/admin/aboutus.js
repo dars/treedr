@@ -1,0 +1,56 @@
+var au_ds = new Ext.data.JsonStore({
+	proxy:new Ext.data.HttpProxy({
+		method:'post',
+		url:base_url+'admin/aboutus'
+	}),
+	root:'root',
+	fields:[
+		{name:'id',type:'int'},
+		{name:'node_type',type:'string'},
+		{name:'title',type:'string'},
+		{name:'content',type:'string'},
+		{name:'created',type:'string'},
+		{name:'modified',type:'string'}
+	]
+});
+au_ds.on('load',function(){
+	au_form.getForm().loadRecord(au_ds.getAt(0));
+});
+var au_form = new Ext.form.FormPanel({
+	title:'關於我們',
+	labelAlign:'right',
+	labelWidth:100,
+	frame:true,
+	defaults:{
+		anchor:'85%',
+		msgTarget:'side'
+	},
+	items:[{
+		xtype:'displayfield',
+		fieldLabel:'標題',
+		name:'node_type'
+	},{
+		xtype:'ckeditor',
+		fieldLabel:'內容',
+		layout:'fit',
+		name:'content'
+	},{
+		xtype:'displayfield',
+		fieldLabel:'最後更新時間',
+		name:'modified'
+	},{
+		xtype:'hidden',
+		name:'id'
+	}],
+	buttons:[{
+		text:'儲存',
+		handler:function(){
+			au_form.getForm().submit({
+				url:base_url+'admin/au_save',
+				success:function(){
+					show_Growl(1,'訊息','資料已儲存');
+				}
+			});
+		}
+	}]
+});
