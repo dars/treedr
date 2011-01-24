@@ -25,6 +25,7 @@
 		<script src="<?=site_url('public/js/admin/admin.js')?>"></script>
 		<script src="<?=site_url('public/js/admin/aboutus.js');?>"></script>
 		<script src="<?=site_url('public/js/admin/relevant.js');?>"></script>
+		<script src="<?=site_url('public/js/admin/news.js');?>"></script>
 	</head>
 	<body>
 	</body>
