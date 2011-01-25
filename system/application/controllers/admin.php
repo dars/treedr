@@ -26,7 +26,7 @@ class Admin extends Controller{
 		echo '</script>';
 	}
 	function aboutus(){
-		$this->db->where('node_type','關於我們');
+		$this->db->where('type_id',3);
 		$query = $this->db->get('nodes');
 		$res = new stdClass();
 		$res->root = $query->result();
@@ -41,7 +41,7 @@ class Admin extends Controller{
 		echo '{"success":true}';
 	}
 	function relevant(){
-		$this->db->where('node_type','相關法令');
+		$this->db->where('type_id',4);
 		$query = $this->db->get('nodes');
 		$res = new stdClass();
 		$res->root = $query->result();

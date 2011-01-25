@@ -89,6 +89,16 @@ tree.on('click',function(node){
 			rv_ds.load();
 			tp.activate('relevant');
 			break;
-			
+		case 'news':
+			var ti = tp.getItem('news');
+			if(typeof ti === 'undefined'){
+				ti = tp.add({
+					title:node.text,
+					id:'news',
+					items:[news]
+				});
+			}
+			tp.activate('news');
+			break;
 	}
 });

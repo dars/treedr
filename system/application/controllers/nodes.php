@@ -2,7 +2,7 @@
 class Nodes extends Controller{
 	function __construct(){parent::Controller();}
 	function aboutus(){
-		$this->db->where('node_type','關於我們');
+		$this->db->where('type_id',3);
 		$query = $this->db->get('nodes');
 		$data = $query->row_array();
 		$data['title_img'] = site_url('public/images/main/02about/title.jpg');
@@ -11,7 +11,7 @@ class Nodes extends Controller{
 		$this->parser->parse('layout/main',$pdata);
 	}
 	function relevant(){
-		$this->db->where('node_type','相關法令');
+		$this->db->where('type_id',4);
 		$query = $this->db->get('nodes');
 		$data = $query->row_array();
 		$data['title_img'] = site_url('public/images/main/09relevant/title.jpg');
