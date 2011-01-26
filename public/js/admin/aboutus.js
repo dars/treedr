@@ -6,7 +6,6 @@ var au_ds = new Ext.data.JsonStore({
 	root:'root',
 	fields:[
 		{name:'id',type:'int'},
-		{name:'node_type',type:'string'},
 		{name:'title',type:'string'},
 		{name:'content',type:'string'},
 		{name:'created',type:'string'},
@@ -28,7 +27,7 @@ var au_form = new Ext.form.FormPanel({
 	items:[{
 		xtype:'displayfield',
 		fieldLabel:'標題',
-		name:'node_type'
+		value:'關於我們'
 	},{
 		xtype:'ckeditor',
 		fieldLabel:'內容',

@@ -6,7 +6,6 @@ var rv_ds = new Ext.data.JsonStore({
 	root:'root',
 	fields:[
 		{name:'id',type:'int'},
-		{name:'node_type',type:'string'},
 		{name:'title',type:'string'},
 		{name:'content',type:'string'},
 		{name:'created',type:'string'},
@@ -28,7 +27,7 @@ var rv_form = new Ext.form.FormPanel({
 	items:[{
 		xtype:'displayfield',
 		fieldLabel:'標題',
-		name:'node_type'
+		value:'相關規定法令'
 	},{
 		xtype:'ckeditor',
 		fieldLabel:'內容',
