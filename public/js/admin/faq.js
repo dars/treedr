@@ -1,5 +1,5 @@
-var defending_taxo_ds = new Ext.data.JsonStore({
-	proxy:new Ext.data.HttpProxy({method:'post',url:base_url+"admin/taxo_list/6"}),
+var faq_taxo_ds = new Ext.data.JsonStore({
+	proxy:new Ext.data.HttpProxy({method:'post',url:base_url+"admin/taxo_list/9"}),
 	root:'root',
 	fields:[
 		{name:'id',type:'int'},
@@ -7,9 +7,9 @@ var defending_taxo_ds = new Ext.data.JsonStore({
 	]
 });
 
-var defending_taxo_cm = new Ext.grid.ColumnModel([
+var faq_taxo_cm = new Ext.grid.ColumnModel([
 	{header:'id',dataIndex:'id',hidden:true},
-	{header:'名稱',dataIndex:'name',id:'defending_taxo_name'},
+	{header:'名稱',dataIndex:'name',id:'faq_taxo_name'},
 	{
 		align:'right',
 		xtype: 'actioncolumn',
@@ -17,7 +17,7 @@ var defending_taxo_cm = new Ext.grid.ColumnModel([
 			icon:base_url+'public/images/fam/delete.gif',
 			tooltip:'刪除此分類',
 			handler:function(grid, rowIndex, colIndex) {
-				var rec = defending_taxo_ds.getAt(rowIndex);
+				var rec = faq_taxo_ds.getAt(rowIndex);
 				var tmp_id = rec.get('id');
 				Ext.Msg.confirm('訊息','確定刪除此分類？ 相關的資料將會變成未分類狀態',function(btn){
 					if(btn === 'yes'){
@@ -26,10 +26,10 @@ var defending_taxo_cm = new Ext.grid.ColumnModel([
 							params:'id='+tmp_id,
 							success:function(){
 								show_Growl(1,'訊息','刪除已完成');
-								defending_form.getForm().reset();
-								defending_taxo_ds.load();
-								defending_ds.load();
-								defending_form.buttons[0].setText('新增');
+								faq_form.getForm().reset();
+								faq_taxo_ds.load();
+								faq_ds.load();
+								faq_form.buttons[0].setText('新增');
 							}
 						});
 					}
@@ -38,56 +38,59 @@ var defending_taxo_cm = new Ext.grid.ColumnModel([
 		}]
 	}
 ]);
-var defending_taxo_grid = new Ext.grid.GridPanel({
+var faq_taxo_grid = new Ext.grid.GridPanel({
 	collapsible:true,
 	region:'west',
 	title:'分類列表',
 	width:200,
-	autoExpandColumn:'defending_taxo_name',
+	autoExpandColumn:'faq_taxo_name',
 	viewConfig:{forceFit:true},
-	cm:defending_taxo_cm,
-	store:defending_taxo_ds,
+	cm:faq_taxo_cm,
+	store:faq_taxo_ds,
 	enableHdMenu:false,
 	stripeRows:true
 });
 
-var defending_ds = new Ext.data.JsonStore({
-	proxy:new Ext.data.HttpProxy({method:'post',url:base_url+'admin/defending'}),
+var faq_ds = new Ext.data.JsonStore({
+	proxy:new Ext.data.HttpProxy({method:'post',url:base_url+"admin/faq"}),
 	root:'root',
 	fields:[
 		{name:'id',type:'int'},
 		{name:'tname',type:'string'},
+		{name:'t_id',type:'int'},
 		{name:'title',type:'string'},
 		{name:'content',type:'string'},
+		{name:'created',type:'string'},
 		{name:'modified',type:'string'}
 	]
 });
-var defending_cm = new Ext.grid.ColumnModel([
+
+var faq_cm = new Ext.grid.ColumnModel([
 	new Ext.grid.RowNumberer(),
+	{header:'id',dataIndex:'id',hidden:true},
 	{header:'類別',dataIndex:'tname'},
-	{header:'標題',dataIndex:'title',id:'defending_title'},
+	{header:'標題',dataIndex:'title',id:'faq_title'},
 	{header:'更新時間',dataIndex:'modified',width:120}
 ]);
-var defending_grid = new Ext.grid.GridPanel({
+var faq_grid = new Ext.grid.GridPanel({
 	region:'north',
-	cm:defending_cm,
-	store:defending_ds,
-	autoScroll:true,
+	cm:faq_cm,
+	store:faq_ds,
+	title:'我要提問列表',
 	height:200,
-	title:'樹木醫生列表',
-	autoExpandColumn:'defending_title',
+	autoExpandColumn:'faq_title',
 	stripeRows:true,
 	enableHdMenu:false
 });
-defending_grid.on('rowdblclick',function(grid,rowIndex){
+faq_grid.on('rowdblclick',function(grid,rowIndex){
 	var r = grid.getStore().getAt(rowIndex);
-	defending_form.getForm().loadRecord(r);
-	defending_form.buttons[0].setText('修改');
+	faq_form.getForm().loadRecord(r);
+	faq_form.buttons[0].setText('修改');
 });
-var defending_combo = new Ext.form.ComboBox({
+var faq_combo = new Ext.form.ComboBox({
 	fieldLabel:'類別',
-	id:'defending_combo',
-	store:defending_taxo_ds,
+	id:'faq_combo',
+	store:faq_taxo_ds,
 	mode:'local',
 	hiddenName:'t_id',
 	displayField:'name',
@@ -95,22 +98,23 @@ var defending_combo = new Ext.form.ComboBox({
 	emptyText:'請選擇',
 	allowBlank:false
 });
-var defending_form = new Ext.form.FormPanel({
+
+var faq_form = new Ext.form.FormPanel({
 	region:'center',
 	autoScroll:true,
 	labelAlign:'left',
-	title:'樹木醫生表單',
+	title:'我要提問表單',
 	labelWidth:40,
 	frame:true,
 	defaults:{anchor:'95%',msgTarget:'side',allowBlank:false},
-	items:[defending_combo,{
+	items:[{
 		xtype:'hidden',
 		name:'id',
 		allowBlank:true
-	},{
+	},faq_combo,{
 		xtype:'textfield',
 		fieldLabel:'標題',
-		name:'title'
+		name:'title',
 	},{
 		xtype:'ckeditor',
 		fieldLabel:'內容',
@@ -119,15 +123,16 @@ var defending_form = new Ext.form.FormPanel({
 	buttons:[{
 		text:'新增',
 		handler:function(){
-			if(defending_form.getForm().isValid()){
-				defending_form.getForm().submit({
-					url:base_url+'admin/defending_save',
+			if(faq_form.getForm().isValid()){
+				faq_form.getForm().submit({
+					url:base_url+'admin/faq_save',
 					waitMsg:'資料儲存中',
 					success:function(){
 						show_Growl(1,'訊息','資料已儲存完畢');
-						defending_form.getForm().reset();
-						defending_ds.load();
-						defending_form.buttons[0].setText('新增');
+						faq_form.getForm().reset();
+						faq_taxo_ds.load();
+						faq_ds.load();
+						faq_form.buttons[0].setText('新增');
 					}
 				})
 			}
@@ -135,13 +140,13 @@ var defending_form = new Ext.form.FormPanel({
 	},{
 		text:'清除',
 		handler:function(){
-			defending_form.getForm().reset();
-			defending_form.buttons[0].setText('新增');
+			faq_form.getForm().reset();
+			faq_form.buttons[0].setText('新增');
 		}
 	},{
 		text:'刪除',
 		handler:function(){
-			var tmp_id = defending_form.getForm().findField('id').getValue();
+			var tmp_id = faq_form.getForm().findField('id').getValue();
 			if(tmp_id === ''){
 				show_Growl(2,'提醒','請先選擇要刪除的資料');
 			}else{
@@ -150,22 +155,22 @@ var defending_form = new Ext.form.FormPanel({
 					params:'foo[]='+tmp_id,
 					success:function(){
 						show_Growl(1,'訊息','刪除已完成');
-						defending_form.getForm().reset();
-						defending_ds.load();
-						defending_form.buttons[0].setText('新增');
+						faq_form.getForm().reset();
+						faq_taxo_ds.load();
+						faq_ds.load();
+						faq_form.buttons[0].setText('新增');
 					}
 				});
 			}
 		}
 	}]
 });
-
-var defending = {
+var faq = {
 	layout:'border',
-	id:'defending_browser',
-	items:[defending_taxo_grid,{
+	id:'faq_browser',
+	items:[faq_taxo_grid,{
 		region:'center',
 		layout:'border',
-		items:[defending_grid,defending_form]
+		items:[faq_grid,faq_form]
 	}]
 };

@@ -123,8 +123,73 @@ tree.on('click',function(node){
 					items:[defending]
 				});
 			}
+			defending_taxo_ds.load();
 			defending_ds.load();
 			tp.activate('defending');
+			break;
+		case 'reference':
+			var ti = tp.getItem('projects');
+			if(typeof ti === 'undefined'){
+				ti = tp.add({
+					title:node.text,
+					id:'projects',
+					items:[projects]
+				});
+			}
+			projects_taxo_ds.load();
+			projects_ds.load();
+			tp.activate('projects');
+			break;
+		case 'knowledge':
+			var ti = tp.getItem('knowledge');
+			if(typeof ti === 'undefined'){
+				ti = tp.add({
+					title:node.text,
+					id:'knowledge',
+					items:[knowledge]
+				});
+			}
+			knowledge_taxo_ds.load();
+			knowledge_ds.load();
+			tp.activate('knowledge');
+			break;
+		case 'hyperlinks':
+			var ti = tp.getItem('hyperlinks');
+			if(typeof ti === 'undefined'){
+				ti = tp.add({
+					title:node.text,
+					id:'hyperlinks',
+					items:[hyperlinks]
+				});
+			}
+			hyperlinks_ds.load();
+			tp.activate('hyperlinks');
+			break;
+		case 'faq':
+			var ti = tp.getItem('faq');
+			if(typeof ti === 'undefined'){
+				ti = tp.add({
+					title:node.text,
+					id:'faq',
+					items:[faq]
+				});
+			}
+			faq_taxo_ds.load();
+			faq_ds.load();
+			tp.activate('faq');
+			break;
+		case 'event':
+			var ti = tp.getItem('event');
+			if(typeof ti === 'undefined'){
+				ti = tp.add({
+					title:node.text,
+					id:'event',
+					items:[events]
+				});
+			}
+			events_taxo_ds.load();
+			events_ds.load();
+			tp.activate('event');
 			break;
 	}
 });
