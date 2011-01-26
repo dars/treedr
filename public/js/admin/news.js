@@ -6,7 +6,7 @@ var news_taxo_ds = new Ext.data.JsonStore({
 		{name:'name',type:'string'}
 	]
 });
-news_taxo_ds.load();
+
 var news_taxo_cm = new Ext.grid.ColumnModel([
 	{header:'id',dataIndex:'id',hidden:true},
 	{header:'名稱',dataIndex:'name',id:'news_taxo_name'},
@@ -64,7 +64,7 @@ var news_ds = new Ext.data.JsonStore({
 		{name:'modified',type:'string'}
 	]
 });
-news_ds.load();
+
 var news_cm = new Ext.grid.ColumnModel([
 	new Ext.grid.RowNumberer(),
 	{header:'id',dataIndex:'id',hidden:true},
@@ -109,7 +109,8 @@ var news_form = new Ext.form.FormPanel({
 	defaults:{anchor:'95%',msgTarget:'side',allowBlank:false},
 	items:[{
 		xtype:'hidden',
-		name:'id'
+		name:'id',
+		allowBlank:true
 	},news_combo,{
 		xtype:'textfield',
 		fieldLabel:'標題',
@@ -150,7 +151,7 @@ var news_form = new Ext.form.FormPanel({
 				show_Growl(2,'提醒','請先選擇要刪除的資料');
 			}else{
 				Ext.Ajax.request({
-					url:base_url+'admin/news_destory',
+					url:base_url+'admin/nodes_destory',
 					params:'foo[]='+tmp_id,
 					success:function(){
 						show_Growl(1,'訊息','刪除已完成');

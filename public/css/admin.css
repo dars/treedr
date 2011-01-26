@@ -1,3 +1,6 @@
 h1{
 	background:url(../images/admin/h1_bg.jpg) bottom repeat-x;
 }
+.x-grid3-row-over .x-grid3-cell-inner {
+	font-weight: bold;
+}

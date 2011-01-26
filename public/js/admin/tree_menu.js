@@ -98,7 +98,33 @@ tree.on('click',function(node){
 					items:[news]
 				});
 			}
+			news_taxo_ds.load();
+			news_ds.load();
 			tp.activate('news');
+			break;
+		case 'service':
+			var ti = tp.getItem('service');
+			if(typeof ti === 'undefined'){
+				ti = tp.add({
+					title:node.text,
+					id:'service',
+					items:[service]
+				});
+			}
+			service_ds.load();
+			tp.activate('service');
+			break;
+		case 'defending':
+			var ti = tp.getItem('defending');
+			if(typeof ti === 'undefined'){
+				ti = tp.add({
+					title:node.text,
+					id:'defending',
+					items:[defending]
+				});
+			}
+			defending_ds.load();
+			tp.activate('defending');
 			break;
 	}
 });

@@ -102,12 +102,60 @@ class Admin extends Controller{
 		}
 		echo '{"success":true}';
 	}
-	function news_destory(){
+	function nodes_destory(){
 		$ids = $this->input->post('foo');
 		foreach($ids as $i):
 			$this->db->where('id',$i);
 			$this->db->delete('nodes');
 		endforeach;
+		echo '{"success":true}';
+	}
+	function service(){
+		$this->db->where('a.type_id',5);
+		$this->db->order_by('a.id','DESC');
+		$query = $this->db->get('nodes as a');
+		$res = new stdClass();
+		$res->root = $query->result();
+		echo json_encode($res);
+	}
+	function service_save(){
+		$tmp = array();
+		$tmp['title'] = $this->input->post('title');
+		$tmp['content'] = $this->input->post('content');
+		$tmp['type_id'] = 5;
+		$tmp_time = date('Y-m-d H:i:s');
+		$tmp['modified'] = $tmp_time;
+		if($this->input->post('id')){
+			$this->db->where('id',$this->input->post('id'));
+			$this->db->update('nodes',$tmp);
+		}else{
+			$tmp['created'] = $tmp_time;
+			$this->db->insert('nodes',$tmp);
+		}
+		echo '{"success":true}';
+	}
+	function defending(){
+		$this->db->where('a.type_id',6);
+		$this->db->order_by('a.id','DESC');
+		$query = $this->db->get('nodes as a');
+		$res = new stdClass();
+		$res->root = $query->result();
+		echo json_encode($res);
+	}
+	function defending_save(){
+		$tmp = array();
+		$tmp['title'] = $this->input->post('title');
+		$tmp['content'] = $this->input->post('content');
+		$tmp['type_id'] = 6;
+		$tmp_time = date('Y-m-d H:i:s');
+		$tmp['modified'] = $tmp_time;
+		if($this->input->post('id')){
+			$this->db->where('id',$this->input->post('id'));
+			$this->db->update('nodes',$tmp);
+		}else{
+			$tmp['created'] = $tmp_time;
+			$this->db->insert('nodes',$tmp);
+		}
 		echo '{"success":true}';
 	}
 }
