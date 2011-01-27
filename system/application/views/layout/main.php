@@ -27,6 +27,19 @@ function MM_swapImage() { //v3.0
 }
 //-->
 </script>
+<link rel="stylesheet" href="<?=site_url('public/css/jquery.fancybox-1.3.4.css');?>">
+<script src="<?=site_url('public/js/jquery-1.4.4.min.js')?>"></script>
+<script src="<?=site_url('public/js/jquery-ui-1.8.7.min.js')?>"></script>
+<script src="<?=site_url('public/js/jquery.easing-1.3.pack.js')?>"></script>
+<script src="<?=site_url('public/js/jquery.fancybox-1.3.4.pack.js')?>"></script>
+<script src="<?=site_url('public/js/jquery.mousewheel-3.0.4.pack.js')?>"></script>
+<script>
+$(function(){
+	$('a[rel=fancy_group]').fancybox({
+		'showCloseButton':false
+	});
+});
+</script>
 <style type="text/css">
 <!--
 @import url("<?=site_url('public/css/css-index.css')?>");
@@ -46,18 +59,25 @@ body {
 				<td width="298"><img src="<?=site_url('public/images/logo.jpg')?>" width="298" height="131"></td>
 				<td><table width="602" cellspacing="0" cellpadding="0">
 					<tr>
-						<td height="41" align="right"><span class="link01"><a href="index.htm" class="link01">首頁</a> ︱ <a href="<?=site_url('nodes/aboutus');?>" class="link01">關於我們</a> ︱ <a href="10link.html" class="link01">友善連結</a> ︱ <a href="11contact.html" class="link01">聯絡我們</a> ︱ <a href="12sitmap.html" class="link01">網站地圖</a> ︱ <a href="<?=site_url('nodes/relevant')?>" class="link01">相關規定法令</a></span>　</td>
+						<td height="41" align="right"><span class="link01">
+							<a href="<?=site_url('nodes/aboutus')?>" class="link01">首頁</a> ︱ 
+							<a href="<?=site_url('nodes/aboutus');?>" class="link01">關於我們</a> ︱ 
+							<a href="<?=site_url('links')?>" class="link01">友善連結</a> ︱ 
+							<a href="<?=site_url('contact')?>" class="link01">聯絡我們</a> ︱ 
+							<a href="<?=site_url('sitemap')?>" class="link01">網站地圖</a> ︱ 
+							<a href="<?=site_url('nodes/relevant')?>" class="link01">相關規定法令</a>
+						</span>　</td>
 					</tr>
 					<tr>
 						<td height="59"><table width="602" cellspacing="0" cellpadding="0">
 							<tr>
-								<td width="87"><a href="01news.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','<?=site_url('public/images/b01-b.jpg')?>',1)"><img src="<?=site_url('public/images/b01.jpg')?>" name="Image2" width="87" height="59" border="0"></a></td>
-								<td width="88"><a href="03service.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','<?=site_url('public/images/b02-b.jpg')?>',1)"><img src="<?=site_url('public/images/b02.jpg')?>" name="Image3" width="88" height="59" border="0"></a></td>
-								<td width="85"><a href="04defend.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','<?=site_url('public/images/b03-b.jpg')?>',1)"><img src="<?=site_url('public/images/b03.jpg')?>" name="Image4" width="85" height="59" border="0"></a></td>
-								<td width="87"><a href="05reference.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','<?=site_url('public/images/b04-b.jpg')?>',1)"><img src="<?=site_url('public/images/b04.jpg')?>" name="Image5" width="87" height="59" border="0"></a></td>
-								<td width="87"><a href="06event.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','<?=site_url('public/images/b05-b.jpg')?>',1)"><img src="<?=site_url('public/images/b05.jpg')?>" name="Image6" width="87" height="59" border="0"></a></td>
-								<td width="85"><a href="07know.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','<?=site_url('public/images/b06-b.jpg')?>',1)"><img src="<?=site_url('public/images/b06.jpg')?>" name="Image7" width="85" height="59" border="0"></a></td>
-								<td><a href="08faq.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','<?=site_url('public/images/b07-b.jpg')?>',1)"><img src="<?=site_url('public/images/b07.jpg')?>" name="Image8" width="83" height="59" border="0"></a></td>
+								<td width="87"><a href="<?=site_url('news')?>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','<?=site_url('public/images/b01-b.jpg')?>',1)"><img src="<?=site_url('public/images/b01.jpg')?>" name="Image2" width="87" height="59" border="0"></a></td>
+								<td width="88"><a href="<?=site_url('service')?>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','<?=site_url('public/images/b02-b.jpg')?>',1)"><img src="<?=site_url('public/images/b02.jpg')?>" name="Image3" width="88" height="59" border="0"></a></td>
+								<td width="85"><a href="<?=site_url('defending')?>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','<?=site_url('public/images/b03-b.jpg')?>',1)"><img src="<?=site_url('public/images/b03.jpg')?>" name="Image4" width="85" height="59" border="0"></a></td>
+								<td width="87"><a href="<?=site_url('projects')?>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','<?=site_url('public/images/b04-b.jpg')?>',1)"><img src="<?=site_url('public/images/b04.jpg')?>" name="Image5" width="87" height="59" border="0"></a></td>
+								<td width="87"><a href="<?=site_url('events')?>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','<?=site_url('public/images/b05-b.jpg')?>',1)"><img src="<?=site_url('public/images/b05.jpg')?>" name="Image6" width="87" height="59" border="0"></a></td>
+								<td width="85"><a href="<?=site_url('knowledge')?>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','<?=site_url('public/images/b06-b.jpg')?>',1)"><img src="<?=site_url('public/images/b06.jpg')?>" name="Image7" width="85" height="59" border="0"></a></td>
+								<td><a href="<?=site_url('faq')?>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','<?=site_url('public/images/b07-b.jpg')?>',1)"><img src="<?=site_url('public/images/b07.jpg')?>" name="Image8" width="83" height="59" border="0"></a></td>
 							</tr>
 						</table></td>
 					</tr>
@@ -88,10 +108,23 @@ body {
 				<td><img src="<?=site_url('public/images/m-pic01.jpg')?>" width="900" height="154"></td>
 			</tr>
 			<tr>
-				<td height="20" align="center" class="link01"><a href="index.htm" class="link01">首頁</a> ∣ <a href="01news.html" class="link01">最新消息</a> ∣ <a href="<?=site_url('nodes/aboutus');?>" class="link01">關於我們</a> ∣ <a href="03service.html" class="link01">服務項目</a> ∣ <a href="04defend.html" class="link01">樹木醫生</a> ∣ <a href="05reference.html" class="link01">專案展示</a> ∣ <a href="06event.html" class="link01">活動講座</a> ∣ <a href="07know.html" class="link01">樹木知識</a> ∣ <a href="08faq.html" class="link01">我要提問</a> ∣ <a href="<?=site_url('nodes/relevant')?>" class="link01">相關規定法令</a> ∣ <a href="10link.html" class="link01">友善連結</a> ∣ <a href="11contact.html" class="link01">聯絡我們</a> ∣ <a href="12sitmap.html" class="link01">網站地圖</a></td>
+				<td height="20" align="center" class="link01">
+					<a href="<?=site_url('nodes/aboutus')?>" class="link01">首頁</a> ∣ 
+					<a href="<?=site_url('news')?>" class="link01">最新消息</a> ∣ 
+					<a href="<?=site_url('nodes/aboutus');?>" class="link01">關於我們</a> ∣ 
+					<a href="<?=site_url('service')?>" class="link01">服務項目</a> ∣ 
+					<a href="<?=site_url('defending')?>" class="link01">樹木醫生</a> ∣ 
+					<a href="<?=site_url('projects')?>" class="link01">專案展示</a> ∣ 
+					<a href="<?=site_url('events')?>" class="link01">活動講座</a> ∣ 
+					<a href="<?=site_url('knowledge')?>" class="link01">樹木知識</a> ∣ 
+					<a href="<?=site_url('faq')?>" class="link01">我要提問</a> ∣ 
+					<a href="<?=site_url('nodes/relevant')?>" class="link01">相關規定法令</a> ∣ 
+					<a href="<?=site_url('links')?>" class="link01">友善連結</a> ∣ 
+					<a href="<?=site_url('contact')?>" class="link01">聯絡我們</a> ∣ 
+					<a href="<?=site_url('sitemap')?>" class="link01">網站地圖</a></td>
 			</tr>
 			<tr>
-				<td height="80" align="center"><span class="copyright">加州國際股份有限公司　2010 &copy; 版權所有</span><br>
+				<td height="80" align="center"><span class="copyright">加州國際股份有限公司　2011 &copy; 版權所有</span><br>
 					<span class="copyright1">11698台北市文山區興隆路三段297號1樓　TEL：02-2239-0011　FAX：02-2239-6558　E-mail：hksl.ab@msa.hinet.net<br>
 					1F, No.297, Sec. 3, ShingLung Rd., Wenshan District, Taipei City, 11698, Taiwan</span></td>
 			</tr>

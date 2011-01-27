@@ -4,7 +4,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.1.44)
 # Database: treedr
-# Generation Time: 2011-01-27 03:58:53 +0800
+# Generation Time: 2011-01-27 13:39:52 +0800
 # ************************************************************
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -57,13 +57,13 @@ CREATE TABLE `nodes` (
   `type_id` varchar(5) DEFAULT NULL,
   `t_id` int(5) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 LOCK TABLES `nodes` WRITE;
 /*!40000 ALTER TABLE `nodes` DISABLE KEYS */;
 INSERT INTO `nodes` (`id`,`title`,`content`,`created`,`modified`,`type_id`,`t_id`)
 VALUES
-	(1,NULL,'<p>\n	<strong><span style=\"color: rgb(0, 128, 0);\"><span style=\"font-size: 14px;\">加州國際股份有限公司成立簡歷：</span></span></strong></p>\n<table align=\"left\" border=\"0\" cellpadding=\"1\" cellspacing=\"1\" style=\"width: 517px; height: 286px;\">\n	<tbody>\n		<tr>\n			<td style=\"width: 35px;\">\n				<img alt=\"\" src=\"http://192.168.1.131/~Dars/treedr/public/files/ckfiles/fe98ad1ab21b1001f5eeb99fcdb50e71.jpg\" style=\"width: 30px; height: 30px;\" /></td>\n			<td>\n				<span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 14px;\">民國80年 籌備</span></span></td>\n		</tr>\n		<tr>\n			<td>\n				<img alt=\"\" src=\"http://192.168.1.131/~Dars/treedr/public/files/ckfiles/fe98ad1ab21b1001f5eeb99fcdb50e71.jpg\" style=\"width: 30px; height: 30px;\" /></td>\n			<td>\n				<span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 14px;\">民國83年 成立 加州國際股份有限公司</span></span></td>\n		</tr>\n		<tr>\n			<td>\n				<img alt=\"\" src=\"http://192.168.1.131/~Dars/treedr/public/files/ckfiles/fe98ad1ab21b1001f5eeb99fcdb50e71.jpg\" style=\"width: 30px; height: 30px;\" /></td>\n			<td>\n				<span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 14px;\">民國83年-迄今 執行景觀綠美化工程</span></span></td>\n		</tr>\n		<tr>\n			<td>\n				<img alt=\"\" src=\"http://192.168.1.131/~Dars/treedr/public/files/ckfiles/fe98ad1ab21b1001f5eeb99fcdb50e71.jpg\" style=\"width: 30px; height: 30px;\" /></td>\n			<td>\n				<span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 14px;\">民國95年 接受樹木褐根病防治講習及辦理相關防治作業</span></span></td>\n		</tr>\n		<tr>\n			<td>\n				<img alt=\"\" src=\"http://192.168.1.131/~Dars/treedr/public/files/ckfiles/fe98ad1ab21b1001f5eeb99fcdb50e71.jpg\" style=\"width: 30px; height: 30px;\" /></td>\n			<td>\n				<span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 14px;\">民國96年-迄今 執行台北市樹木褐根病防治作業</span></span></td>\n		</tr>\n		<tr>\n			<td>\n				<img alt=\"\" src=\"http://192.168.1.131/~Dars/treedr/public/files/ckfiles/fe98ad1ab21b1001f5eeb99fcdb50e71.jpg\" style=\"width: 30px; height: 30px;\" /></td>\n			<td>\n				<span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 14px;\">民國97年 樹木褐根病防治檢驗流程及檢體檢驗標誌之製作技術轉移</span></span></td>\n		</tr>\n		<tr>\n			<td>\n				<img alt=\"\" src=\"http://192.168.1.131/~Dars/treedr/public/files/ckfiles/fe98ad1ab21b1001f5eeb99fcdb50e71.jpg\" style=\"width: 30px; height: 30px;\" /></td>\n			<td>\n				<span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 14px;\">民國98年 樹木外科手術之施作流程技術轉移</span></span></td>\n		</tr>\n		<tr>\n			<td>\n				<img alt=\"\" src=\"http://192.168.1.131/~Dars/treedr/public/files/ckfiles/fe98ad1ab21b1001f5eeb99fcdb50e71.jpg\" style=\"width: 30px; height: 30px;\" /></td>\n			<td>\n				<span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 14px;\">民國99年 實驗室成立</span></span></td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	&nbsp;</p>\n','2011-01-23 23:34:05','2011-01-23 23:34:05','3',NULL),
+	(1,NULL,'<p>\n	<strong><span style=\"color: rgb(0, 128, 0);\"><span style=\"font-size: 14px;\">加州國際股份有限公司成立簡歷：</span></span></strong></p>\n<table align=\"left\" border=\"0\" cellpadding=\"1\" cellspacing=\"1\" style=\"width: 517px; height: 286px;\">\n	<tbody>\n		<tr>\n			<td style=\"width: 35px;\">\n				<img alt=\"\" src=\"http://localhost/~Dars/treedr/public/files/ckfiles/fe98ad1ab21b1001f5eeb99fcdb50e71.jpg\" style=\"width: 30px; height: 30px;\" /></td>\n			<td>\n				<span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 14px;\">民國80年 籌備</span></span></td>\n		</tr>\n		<tr>\n			<td>\n				<img alt=\"\" src=\"http://localhost/~Dars/treedr/public/files/ckfiles/fe98ad1ab21b1001f5eeb99fcdb50e71.jpg\" style=\"width: 30px; height: 30px;\" /></td>\n			<td>\n				<span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 14px;\">民國83年 成立 加州國際股份有限公司</span></span></td>\n		</tr>\n		<tr>\n			<td>\n				<img alt=\"\" src=\"http://localhost/~Dars/treedr/public/files/ckfiles/fe98ad1ab21b1001f5eeb99fcdb50e71.jpg\" style=\"width: 30px; height: 30px;\" /></td>\n			<td>\n				<span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 14px;\">民國83年-迄今 執行景觀綠美化工程</span></span></td>\n		</tr>\n		<tr>\n			<td>\n				<img alt=\"\" src=\"http://localhost/~Dars/treedr/public/files/ckfiles/fe98ad1ab21b1001f5eeb99fcdb50e71.jpg\" style=\"width: 30px; height: 30px;\" /></td>\n			<td>\n				<span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 14px;\">民國95年 接受樹木褐根病防治講習及辦理相關防治作業</span></span></td>\n		</tr>\n		<tr>\n			<td>\n				<img alt=\"\" src=\"http://localhost/~Dars/treedr/public/files/ckfiles/fe98ad1ab21b1001f5eeb99fcdb50e71.jpg\" style=\"width: 30px; height: 30px;\" /></td>\n			<td>\n				<span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 14px;\">民國96年-迄今 執行台北市樹木褐根病防治作業</span></span></td>\n		</tr>\n		<tr>\n			<td>\n				<img alt=\"\" src=\"http://localhost/~Dars/treedr/public/files/ckfiles/fe98ad1ab21b1001f5eeb99fcdb50e71.jpg\" style=\"width: 30px; height: 30px;\" /></td>\n			<td>\n				<span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 14px;\">民國97年 樹木褐根病防治檢驗流程及檢體檢驗標誌之製作技術轉移</span></span></td>\n		</tr>\n		<tr>\n			<td>\n				<img alt=\"\" src=\"http://localhost/~Dars/treedr/public/files/ckfiles/fe98ad1ab21b1001f5eeb99fcdb50e71.jpg\" style=\"width: 30px; height: 30px;\" /></td>\n			<td>\n				<span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 14px;\">民國98年 樹木外科手術之施作流程技術轉移</span></span></td>\n		</tr>\n		<tr>\n			<td>\n				<img alt=\"\" src=\"http://localhost/~Dars/treedr/public/files/ckfiles/fe98ad1ab21b1001f5eeb99fcdb50e71.jpg\" style=\"width: 30px; height: 30px;\" /></td>\n			<td>\n				<span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 14px;\">民國99年 實驗室成立</span></span></td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	&nbsp;</p>\n','2011-01-23 23:34:05','2011-01-23 23:34:05','3',NULL),
 	(2,NULL,'<p>\n	bala..bala..bala..bala..bala..bala..</p>\n<p>\n	bala..bala..bala..bala..</p>\n<p>\n	bala..bala..bala..bala..</p>\n<p>\n	bala..bala..</p>\n','2011-01-23 23:34:05','2011-01-24 02:49:53','4',NULL),
 	(3,'上臉書po旅遊計畫 送環遊世界80天','<p>\n	〔自由時報記者李文儀／台北報導〕「環遊世界八十天」不只是十九世紀法國作家凡爾納的小說，二十一世紀可是有航空公司捧著免費機票、飯店及最高達台幣八十四萬元的零用錢讓你花，只要上臉書Facebook提出旅遊計畫，就有機會獲得八十天內暢遊世界的大獎。有背包客說：「簡直是澳洲島主的翻版，超級好康，不參加，對不起父母！」<br />\n	<br />\n	大獎總價值超過150萬<br />\n	<br />\n	國泰航空在Facebook推出「暢遊世界八十日」大賽，只限台灣、日本、加拿大、印尼、印度、南非、英國、美國、香港、荷蘭、新加坡、澳洲等十二個國家地區居民報名，十八歲以上、在三月六日前上臉書說個「讚」，並上傳旅遊計畫短片、照片或文章就可參賽。<br />\n	<br />\n	傳短片、照片或文章<br />\n	<br />\n	國泰航空企業傳訊部副理侯恩錫說，目前已經有上百人報名，參賽者須使用英文，影片限三十到六十秒，文字在兩百字以內；將先選出八位入圍者，獲得免費機票及三晚住宿、每天港幣六百元（三天約台幣六千七百元）零用錢，四月十二日到十四日到香港面試，遊覽香港熱門景點一天，再以社群網絡Twitter上傳照片做最後角逐。<br />\n	<br />\n	目前已上百人報名<br />\n	<br />\n	大獎得主將在五月二日出爐，可獲得六月一日到八月三十一日間的任何八十天，無限次搭乘國泰及港龍航空的經濟艙，每個航點提供三晚住宿，每次旅程可獲得每天最多港幣二千八百元（台幣約一萬零四百四十六元）的餐飲及交通等消費津貼，還有環球旅遊保險，得獎者必須在環遊世界的期間，每天上傳照片及短片到臉書分享。<br />\n	<br />\n	五月二日產生得主<br />\n	<br />\n	目前正在日本打工度假的背包客林仁正說：「有人願意出錢請我玩，一定要報名試試！」一般環遊世界機票若停五個點，就要至少八、九萬元，希望獲獎能去復活島等南美洲或南太平洋等偏遠景點，因為大城市較常有特價機票或廉價航空。自稱「流浪廚師」，已到澳洲、英國等多國打工的他說，將用自己的廚藝長才，提出到陌生人家中料理、換取免費住宿的旅遊計畫。<br />\n	<br />\n	澳洲佬規劃蜜月旅行<br />\n	<br />\n	目前已上傳的參賽計畫中，一位新加坡人表態要照著小說走，從倫敦開啟環遊世界之旅；有一位四十九歲的澳洲佬說，自己沒護照、從未出過國，將和女友結婚，把環遊世界當成蜜月之旅。</p>\n','2011-01-26 15:02:24','2011-01-26 15:02:24','1',3),
 	(4,'花博安檢門 只用過2次','<p>\n	台北市花博安檢門採購合約擺烏龍!台北市警局砸了340多萬，跟廠商租用20套金屬探測電子安檢門，準備在重量級貴賓蒞臨時，裝設在場館入口，不過廠商投訴，340多萬的合約只執行了40萬元，花博開幕到現在，安檢門只用過2次。<br />\n	<br />\n	一般民眾逛花博，進出場館，可能從沒見過什麼安檢門，但是陳雲林來參觀的時候可不一樣，高規格的禮遇，台北市警局還特地架了安檢門。<br />\n	<br />\n	台北市警局砸342萬8571元，向廠商租用20套安檢門設備，還要求每次100人的教育訓練，離譜的是，340多萬的合約，到現在只執行了30萬。<br />\n	<br />\n	花博把責任全推到警察局身上，廠商向議員投訴，覺得根本被耍，更叫人質疑的是，安檢門裝設的標準還有使用的時機何在，警察局一定要給業者合理的交代。</p>\n','2011-01-26 15:23:20','2011-01-26 15:23:20','1',3),
@@ -77,7 +77,9 @@ VALUES
 	(12,'Yahoo','http://www.yahoo.com.tw','2011-01-26 19:24:36','2011-01-26 19:24:36','10',NULL),
 	(13,'PCHome','http://www.pchome.com.tw','2011-01-26 19:24:51','2011-01-26 19:24:51','10',NULL),
 	(14,'Yaｍ番薯藤','http://www.yam.com.tw','2011-01-26 19:25:06','2011-01-26 19:25:06','10',NULL),
-	(15,'雅虎拍賣','http://bid.yahoo.com.tw','2011-01-26 19:25:22','2011-01-26 19:25:22','10',NULL);
+	(15,'雅虎拍賣','http://bid.yahoo.com.tw','2011-01-26 19:25:22','2011-01-26 19:25:22','10',NULL),
+	(16,'第一次開課','<p>\n	<img alt=\"\" src=\"http://l.yimg.com/o/xp/cna/20110127/08/1373469224.jpg\" style=\"width: 120px; height: 160px; margin: 5px; float: left;\" />宏達電暨威盛董事長王雪紅入主香港老牌無線電視台TVB。香港傳媒集團電視廣播（TVB）昨（26）日晚間9時公告，公司大股東邵氏兄弟公司所擁有的26%股權，將全數售給王雪紅參與的投資集團，該集團將成為TVB最大股東。</p>\n','2011-01-27 05:09:16','2011-01-27 05:09:16','8',21),
+	(17,'Janet達人打包教戰 旅遊法寶大公開','<p>\n	<img alt=\"\" src=\"http://l.yimg.com/o/xp/nextmedia/20110127/06/3484386359.jpg\" style=\"width: 200px; height: 133px; margin: 5px; float: left;\" />【張瑞振╱台北報導】過年假期是國人旅遊旺季，出國帶什麼東西最有幫助？《瘋台灣》主持人Janet和搭檔Nadia因經常到國外出外景而成為旅遊達人，她們不管在身體健康、心靈、收納和工作上，出國都有萬全準備，以備不時之需。</p>\n<p>\n	出國最忌諱生病，Janet曾獲准申請進入德州聖安東尼奧醫學院，後來雖因故休學，但這段經歷讓她出國很重視醫藥方面物品，必定會帶小透明包，內有治感冒藥、頭痛、止瀉、暈車、暈船、燒燙傷和脫水等藥物，有如小型醫藥箱。</p>\n<p>\n	帶簡易洗鼻壺 灌鹽水防感冒</p>\n<p>\n	她甚至自備針筒，原來有次赴<a class=\"ynwsyq yqclass\" href=\"http://tw.news.yahoo.com/article/url/d/a/110127/143/2lixv.html?\" id=\"yui-gen10\" title=\"印度\"><span>印度</span></a>偏遠地區旅行，因生病到醫院就診，但她看到髒針筒後當場打退堂鼓，忍到回台灣再就醫，經過這次不舒服的經驗，她之後出國都帶專用針筒出國。</p>\n<p>\n	Nadia不喜歡吃藥，若出國，感冒上身，她會將混著鹽巴的熱水裝在簡易洗鼻壺裡，然後將鹽水從一鼻孔灌入，鹽水再從另一鼻孔流出，有清鼻之用，Janet戲稱也試過這東西，鹽水卻從她眼晴裡流出。</p>\n<p>\n	Janet 建議出國攜物愈簡便愈好，最好能一物多用，如快乾毛巾，5分鐘即乾，好折疊還能當枕頭；收納袋1組有大、中、小共3袋，將衣物放入袋中捲起來壓出空氣，可 減少空間還能防水，由她阿嬤親手縫製的大型絲袋，功能有如睡袋，她笑說：「睡進去時，記得要脫光光喔，因為絲接觸皮膚會產生保暖作用。」</p>\n<p>\n	旅遊若遇衰事很掃興，Janet出國必帶一隻小型大頭狗偶，該狗偶是9年前姊姊送她的禮物，她認為這是她的吉祥物，Nadia則會帶一個印度檀香神像，沒有宗教信仰的她說：「只要遇到不好、困難或要挑戰的事情，我都會跟神像說說，保平安啦！」</p>\n<p>\n	出國5守則保平安</p>\n<p>\n	★財物證件隨身帶：Janet都將小額金錢、護照、<a class=\"ynwsyq yqclass\" href=\"http://tw.news.yahoo.com/article/url/d/a/110127/143/2lixv.html?\" id=\"yui-gen11\" title=\"信用卡\"><span>信用卡</span></a>、照片等放在霹靂袋內，綁在內褲腰上，以褲頭遮住</p>\n<p>\n	★要備齊重要藥品：將感冒、止瀉、暈車、暈船、防脫水等重要藥品放在小型透明袋中，生病時可以派上用場</p>\n<p>\n	★偽裝外型以避險：Nadia建議可將自己頭髮以圍巾包住，裝成一位老婆婆，比較不易被男子察覺而被侵犯</p>\n<p>\n	★外出要告知友人：若外出，Janet建議一定要告訴至少一位朋友你的目的地，或與一群同伴隨行，避免落單</p>\n<p>\n	★玩樂先觀察環境：在國外到Bar玩樂，Nadia建議不要只喝酒，出發前可吃點麵包墊肚子，避免空腹喝醉</p>\n','2011-01-27 05:12:32','2011-01-27 05:12:32','2',22);
 
 /*!40000 ALTER TABLE `nodes` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -98,13 +100,14 @@ CREATE TABLE `projects` (
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 LOCK TABLES `projects` WRITE;
 /*!40000 ALTER TABLE `projects` DISABLE KEYS */;
 INSERT INTO `projects` (`id`,`title`,`content`,`name`,`years`,`t_id`,`created`,`modified`)
 VALUES
-	(1,'QQQQQ','<p>\n	bala..</p>\n<p>\n	bala..</p>\n<p>\n	bala..</p>\n<p>\n	bala..</p>\n<p>\n	bala..</p>\n','WWWWW','2009',19,'2011-01-26 18:17:52','2011-01-26 18:17:52');
+	(1,'QQQQQ','<p>\n	bala..</p>\n<p>\n	bala..</p>\n<p>\n	bala..</p>\n<p>\n	bala..</p>\n<p>\n	bala..</p>\n','WWWWW','2009',13,'2011-01-26 18:17:52','2011-01-26 21:13:56'),
+	(2,'樹木植晶片 山老鼠有贓難銷','<div class=\"w\">\n	<div id=\"ynwsartcontent\">\n		<p>\n			中國時報【潘建志／屏東報導】</p>\n		<p>\n			不只<a class=\"ynwsyq yqclass\" href=\"http://tw.news.yahoo.com/article/url/d/a/110124/4/2lbu6.html?\" id=\"yui-gen0\" title=\"寵物\"><span>寵物</span></a>要植入晶片，樹木也要植入晶片。屏東林區管理處為了要杜絕被盜挖林木的銷贓管道，將晶片植入國有林地的珍貴樹種中，以後只要在市場上發現這些「贓樹」，就能輕易地辨識是從何處盜採，更容易將山老鼠甚至是購買者定罪，更具嚇阻作用。</p>\n		<p>\n			屏東林管處首先選定植入晶片的地區是恆春半島。恆春半島因為落山風強勁，樹木在強風吹襲下形成遒勁獨特的造型，特有的樹瘤、樹溝更讓其身價不凡，市場上非常搶手。加上恆春的山脈海拔低，交通方便，盜採及運輸容易，因此山老鼠特別猖獗。</p>\n		<p>\n			警方估計恆春地區專業的山老鼠集團就多達十多個，集團成員最多十數人，盜挖工具齊全，以報廢車或贓車改裝成山林越野車，遇到警察就棄車逃逸。山老鼠在山林中熟門熟路，還會自己開小路，以無線電相互聯繫，機動性很高，和警方及林務人員大玩捉迷藏。</p>\n		<p>\n			因此屏東林管處今年引進新科技，和猖獗的山老鼠宣戰，作法是將區內珍貴的園藝樹種及林木植入晶片。林政課長張智強說，首先將區內的樹木拍照、定位座標建立基本資料庫，接著將一個已編碼，二吋釘子大小般的晶片打鑽進樹中，再加以密合。</p>\n		<p>\n			之後若這棵樹木被偷，在銷贓市場上被發現，就能輕易地辨別是在何處盜採，有助於將盜木者定罪。張智強說，以往警方或林務人員抓到山老鼠，往往要大費周章查出是在何處盜木，即便山老鼠供出盜木地點，現場因為樹根和挖洞不符，檢察官也無法起訴，讓人氣結。</p>\n		<p>\n			有了這套系統後，就能輕易找出盜木地點，也更證據確鑿讓山老鼠無法狡賴。另外以往都只能定山老鼠的罪，無法將購買者制罪，有了這套系統，購買者也無法脫罪。因為有買賣才有盜採，從買賣源頭阻斷，才能有效防止盜木事件發生。</p>\n		<p>\n			目前晶片已植入恆春半島一萬多棵樹中。張智強說，和被盜木損失相比，晶片花費只是一點點，所以只要經費許可，就盡量幫樹木植入晶片，多少沒有上限。而其他地區的重要林木，也都會陸續進執行。</p>\n	</div>\n</div>\n','Yahoo','2009',14,'2011-01-26 21:20:30','2011-01-26 21:20:46');
 
 /*!40000 ALTER TABLE `projects` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -121,7 +124,7 @@ CREATE TABLE `taxonomy` (
   `weight` float NOT NULL DEFAULT '0',
   `type_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
 LOCK TABLES `taxonomy` WRITE;
 /*!40000 ALTER TABLE `taxonomy` DISABLE KEYS */;
@@ -137,7 +140,9 @@ VALUES
 	(13,'樹木病蟲害防治',0,7),
 	(14,'樹木褐根病防治',0,7),
 	(15,'景觀綠美化工程',0,7),
-	(20,'使用者的提問',0,9);
+	(21,'知識講談',0,8),
+	(20,'使用者的提問',0,9),
+	(22,'旅遊小知識',0,2);
 
 /*!40000 ALTER TABLE `taxonomy` ENABLE KEYS */;
 UNLOCK TABLES;

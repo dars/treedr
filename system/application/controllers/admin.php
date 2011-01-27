@@ -264,7 +264,7 @@ class Admin extends Controller{
 		$tmp = array();
 		$tmp['title'] = $this->input->post('title');
 		$tmp['content'] = $this->input->post('content');
-		$tmp['type_id'] = 6;
+		$tmp['type_id'] = 2;
 		$this->load->model('taxo_model');
 		$tmp['t_id'] = $this->taxo_model->chk_taxo($this->input->post('t_id'),2);
 		$tmp_time = date('Y-m-d H:i:s');
