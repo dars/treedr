@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>加州國際 - 後端管理</title>
+		<link rel="shortcut icon" href="<?=site_url('public/images/favicon.ico')?>" type="image/x-icon" />
 		<link rel="stylesheet" href="<?=site_url('public/resources/css/ext-all.css')?>" />
 		<link rel="stylesheet" href="<?=site_url('public/resources/css/xtheme-gray.css')?>" />
 		<link rel="stylesheet" href="<?=site_url('public/css/fileuploadfield.css')?>" />

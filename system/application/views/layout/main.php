@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>加州國際 - {page_title}</title>
+<link rel="shortcut icon" href="<?=site_url('public/images/favicon.ico')?>" type="image/x-icon" />
 <script type="text/javascript">
 <!--
 function MM_preloadImages() { //v3.0
@@ -63,7 +64,7 @@ body {
 							<a href="<?=site_url('nodes/aboutus')?>" class="link01">首頁</a> ︱ 
 							<a href="<?=site_url('nodes/aboutus');?>" class="link01">關於我們</a> ︱ 
 							<a href="<?=site_url('links')?>" class="link01">友善連結</a> ︱ 
-							<a href="<?=site_url('contact')?>" class="link01">聯絡我們</a> ︱ 
+							<a href="mailto:hksl.ab@msa.hinet.net" class="link01">聯絡我們</a> ︱ 
 							<a href="<?=site_url('sitemap')?>" class="link01">網站地圖</a> ︱ 
 							<a href="<?=site_url('nodes/relevant')?>" class="link01">相關規定法令</a>
 						</span>　</td>
@@ -120,13 +121,13 @@ body {
 					<a href="<?=site_url('faq')?>" class="link01">我要提問</a> ∣ 
 					<a href="<?=site_url('nodes/relevant')?>" class="link01">相關規定法令</a> ∣ 
 					<a href="<?=site_url('links')?>" class="link01">友善連結</a> ∣ 
-					<a href="<?=site_url('contact')?>" class="link01">聯絡我們</a> ∣ 
+					<a href="mailto:hksl.ab@msa.hinet.net" class="link01">聯絡我們</a> ∣ 
 					<a href="<?=site_url('sitemap')?>" class="link01">網站地圖</a></td>
 			</tr>
 			<tr>
 				<td height="80" align="center"><span class="copyright">加州國際股份有限公司　2011 &copy; 版權所有</span><br>
-					<span class="copyright1">11698台北市文山區興隆路三段297號1樓　TEL：02-2239-0011　FAX：02-2239-6558　E-mail：hksl.ab@msa.hinet.net<br>
-					1F, No.297, Sec. 3, ShingLung Rd., Wenshan District, Taipei City, 11698, Taiwan</span></td>
+					<span class="copyright1">10052臺北市中正區林森南路59號B1　TEL：02-2396-1234　FAX：02-2396-3312　E-mail：hksl.ab@msa.hinet.net<br>
+					B1F., No.59, Linsen S. Rd., Zhongzheng Dist., Taipei City 10052, Taiwan (R.O.C.)</span></td>
 			</tr>
 			<tr>
 				<td height="20"><img src="<?=site_url('public/images/1pix.gif')?>" width="1" height="1"></td>
@@ -136,4 +137,17 @@ body {
 </table>
 <p id="page_render_time"><br />Page rendered in {elapsed_time} seconds</p>
 </body>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2037884-9']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </html>
