@@ -221,3 +221,53 @@ h3{
 #fancybox-close{
 	border:none;
 }
+#faq_tb,#signup_tb{
+	margin-top:30px;
+	margin-left:auto;
+	margin-right:auto;
+	width:500px;
+}
+#faq_tb td,#faq_tb th,#signup_tb td,#signup_tb th{
+	border:1px #DDD solid;
+}
+#faq_tb th,#signup_tb th{
+	padding:5px;
+	width:100px;
+	color:#45683D;
+	font-weight: normal;
+}
+#faq_tb input,#faq_tb textarea,#signup_tb input{
+	border:1px #EEE solid;
+	background:#DCEED8;
+	color:#666;
+	font-size:13px;
+	padding:3px;
+}
+#faq_tb input,#signup_tb input{
+	width:360px;
+}
+#faq_tb textarea{
+	width:480px;
+	height:200px;
+}
+#faq_tb .actions,#signup_tb .actions{
+	padding:3px;
+	border:none;
+}
+.session_notify{
+	text-align:center;
+	border:1px #97AA92 solid;
+	background:#E9FFE4;
+	padding:5px;
+}
+#signup_tb th#signup_title{
+	text-align:center;
+	color:#FAFFF8;
+	background:#61705D;
+	letter-spacing:15px;
+}
+.scount{
+	font-size: 11px;
+	color:#4D6447;
+	margin-right:20px;
+}
