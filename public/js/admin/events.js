@@ -70,7 +70,21 @@ var events_cm = new Ext.grid.ColumnModel([
 	{header:'id',dataIndex:'id',hidden:true},
 	{header:'類別',dataIndex:'tname'},
 	{header:'活動講座名稱',dataIndex:'title',id:'events_title'},
-	{header:'更新時間',dataIndex:'modified',width:120}
+	{header:'更新時間',dataIndex:'modified',width:120},
+	{
+		align:'right',
+		xtype: 'actioncolumn',
+		items: [{
+			icon:base_url+'public/images/fam/user_green.gif',
+			tooltip:'報名列表',
+			handler:function(grid, rowIndex, colIndex) {
+				var rec = events_ds.getAt(rowIndex);
+				var tmp_id = rec.get('id');
+				su_ds.load({params:{n_id:tmp_id}});
+				su_win.show();
+			}
+		}]
+	}
 ]);
 var events_grid = new Ext.grid.GridPanel({
 	region:'north',
@@ -164,6 +178,43 @@ var events_form = new Ext.form.FormPanel({
 			}
 		}
 	}]
+});
+var su_ds = new Ext.data.JsonStore({
+	proxy:new Ext.data.HttpProxy({method:'post',url:base_url+'admin/su'}),
+	root:'root',
+	fields:[
+		{name:'name',type:'string'},
+		{name:'tel',type:'string'},
+		{name:'email',type:'string'},
+		{name:'created',type:'string'},
+	]
+});
+var su_cm = new Ext.grid.ColumnModel([
+	new Ext.grid.RowNumberer(),
+	{header:'連絡姓名',dataIndex:'name'},
+	{header:'連絡電話',dataIndex:'tel'},
+	{header:'Email',dataIndex:'email'},
+	{header:'報名時間',dataIndex:'created'}
+]);
+var su_grid = new Ext.grid.GridPanel({
+	store:su_ds,
+	cm:su_cm,
+	title:'報名清單',
+	height:400,
+	stripeRows:true,
+	enableHdMenu:false
+});
+var su_win = new Ext.Window({
+	title:'報名清單列表',
+	width:500,
+	height:350,
+	autoScroll:true,
+	frame:true,
+	closable:true,
+	closeAction:'hide',
+	layout:'fit',
+	modal:true,
+	items:[su_grid]
 });
 var events = {
 	layout:'border',

@@ -358,4 +358,12 @@ class Admin extends Controller{
 		}
 		echo '{"success":true}';
 	}
+	function su(){
+		$this->db->where('n_id',$this->input->post('n_id'));
+		$query = $this->db->get('signup');
+		$res = new stdClass();
+		$res->root = $query->result();
+		echo json_encode($res);
+	}
+
 }

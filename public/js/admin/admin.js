@@ -13,7 +13,7 @@ Ext.onReady(function(){
 		}
 	});
 	
-	//login_win.show();
+	login_win.show();
 	tp = new Ext.TabPanel({
 		region:'center',
 		closable:true,
