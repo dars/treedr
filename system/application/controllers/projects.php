@@ -5,6 +5,9 @@ class Projects extends Controller{
 		$this->db->select('a.*,b.name as tname,c.name as cname');
 		$this->db->join('taxonomy as b','a.t_id=b.id','left');
 		$this->db->join('files as c','c.n_id=a.id and c.main=1','left');
+		if($this->uri->segment(3)){
+			$this->db->where('a.t_id',$this->uri->segment(3));
+		}
 		$query = $this->db->get('projects as a');
 		$data =array();
 		$data['data'] = $query->result();

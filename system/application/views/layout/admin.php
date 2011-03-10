@@ -23,6 +23,8 @@
 		<script src="<?=site_url('public/js/ext/FileUploadField.js')?>"></script>
 		<script src="<?=site_url('public/js/ext/DataView-more.js')?>"></script>
 		<script src="<?=site_url('public/js/Growl.js')?>"></script>
+		
+		<script src="<?=site_url('public/js/admin/pix_win.js')?>"></script>
 		<script src="<?=site_url('public/js/admin/tree_menu.js')?>"></script>
 		<script src="<?=site_url('public/js/admin/login.js')?>"></script>
 		<script src="<?=site_url('public/js/admin/admin.js')?>"></script>
@@ -38,6 +40,5 @@
 		<script src="<?=site_url('public/js/admin/events.js');?>"></script>
 	</head>
 	<body>
-		<div id="projects_img"></div>
 	</body>
 </html>

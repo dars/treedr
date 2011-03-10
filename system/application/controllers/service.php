@@ -3,6 +3,9 @@ class Service extends Controller{
 	function __construct(){parent::Controller();}
 	function index(){
 		$this->db->where('type_id',5);
+		if($this->uri->segment(3)){
+			$this->db->where('t_id',$this->uri->segment(3));
+		}
 		$this->db->order_by('id','DESC');
 		$query = $this->db->get('nodes');
 		$data = array();

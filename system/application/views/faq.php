@@ -10,9 +10,10 @@ $(function(){
 <?php
 echo "<table class='list_tb'>";
 foreach($data as $r):
-echo "<tr><td>";
-echo "<a href='".site_url($con.'/info/'.$r->id)."'>[".$r->tname."] ".$r->title."</a>";
+echo "<tr><td class=\"list_td\">";
+echo "<a href='".site_url($con.'/info/'.$r->id)."'>".$r->title."</a>";
 echo "<div class='summary'>".mb_substr(strip_tags($r->content),0,100,'utf8')."<a href='".site_url($con.'/info/'.$r->id)."'>...more</a></div>";
+echo "<div class='timestamp'>".$r->created."</div>";
 echo "</td></tr>";
 endforeach;
 echo "</table>";

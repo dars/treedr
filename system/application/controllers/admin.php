@@ -214,14 +214,21 @@ class Admin extends Controller{
 			$this->image_lib->resize();
 			$img_name = $data['file_name'];
 		}
-		if(!empty($img_name)){
-			$tmp['name'] = $img_name;
+		$tmp['title'] = $this->input->post('title');
+		$tmp['content'] = $this->input->post('content');
+		if($this->input->post('id')){
+			$this->db->where('id',$this->input->post('id'));
+			$this->db->update('files',$tmp);
+		}else{
+			if(!empty($img_name)){
+				$tmp['name'] = $img_name;
+			}
 			$tmp['type'] = 'pix';
 			$tmp['n_id'] = $this->input->post('n_id');
 			$tmp['created'] = date('Y-m-d H:i:s');
 			$this->db->insert('files',$tmp);
 		}
-		echo '{"success":true}';
+		echo '{"success":true,"n_id":'.$this->input->post('n_id').'}';
 	}
 	function images_list(){
 		$this->db->where('type','pix');

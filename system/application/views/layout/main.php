@@ -35,9 +35,17 @@ function MM_swapImage() { //v3.0
 <script src="<?=site_url('public/js/jquery.fancybox-1.3.4.pack.js')?>"></script>
 <script src="<?=site_url('public/js/jquery.mousewheel-3.0.4.pack.js')?>"></script>
 <script>
+var tmp_id;
 $(function(){
 	$('a[rel=fancy_group]').fancybox({
-		'showCloseButton':false
+		'titlePosition':'inside'
+	});
+	$('.main_nav a').hover(function(){
+		if(typeof tmp_id !== 'undefined'){
+			$('#sub_nav_'+tmp_id).css('display','none');
+		}
+		tmp_id = this.className.split('_')[2];
+		$('#sub_nav_'+tmp_id).css('display','block');
 	});
 });
 </script>
@@ -70,14 +78,14 @@ body {
 						</span>　</td>
 					</tr>
 					<tr>
-						<td height="59"><table width="602" cellspacing="0" cellpadding="0">
+						<td height="59"><table width="602" cellspacing="0" cellpadding="0" class="main_nav">
 							<tr>
-								<td width="87"><a href="<?=site_url('news')?>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','<?=site_url('public/images/b01-b.jpg')?>',1)"><img src="<?=site_url('public/images/b01.jpg')?>" name="Image2" width="87" height="59" border="0"></a></td>
-								<td width="88"><a href="<?=site_url('service')?>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','<?=site_url('public/images/b02-b.jpg')?>',1)"><img src="<?=site_url('public/images/b02.jpg')?>" name="Image3" width="88" height="59" border="0"></a></td>
-								<td width="85"><a href="<?=site_url('defending')?>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','<?=site_url('public/images/b03-b.jpg')?>',1)"><img src="<?=site_url('public/images/b03.jpg')?>" name="Image4" width="85" height="59" border="0"></a></td>
-								<td width="87"><a href="<?=site_url('projects')?>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','<?=site_url('public/images/b04-b.jpg')?>',1)"><img src="<?=site_url('public/images/b04.jpg')?>" name="Image5" width="87" height="59" border="0"></a></td>
-								<td width="87"><a href="<?=site_url('events')?>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','<?=site_url('public/images/b05-b.jpg')?>',1)"><img src="<?=site_url('public/images/b05.jpg')?>" name="Image6" width="87" height="59" border="0"></a></td>
-								<td width="85"><a href="<?=site_url('knowledge')?>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','<?=site_url('public/images/b06-b.jpg')?>',1)"><img src="<?=site_url('public/images/b06.jpg')?>" name="Image7" width="85" height="59" border="0"></a></td>
+								<td width="87"><a class="main_nav_1" href="<?=site_url('news')?>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','<?=site_url('public/images/b01-b.jpg')?>',1)"><img src="<?=site_url('public/images/b01.jpg')?>" name="Image2" width="87" height="59" border="0"></a></td>
+								<td width="88"><a class="main_nav_5" href="<?=site_url('service')?>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','<?=site_url('public/images/b02-b.jpg')?>',1)"><img src="<?=site_url('public/images/b02.jpg')?>" name="Image3" width="88" height="59" border="0"></a></td>
+								<td width="85"><a class="main_nav_6" href="<?=site_url('defending')?>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','<?=site_url('public/images/b03-b.jpg')?>',1)"><img src="<?=site_url('public/images/b03.jpg')?>" name="Image4" width="85" height="59" border="0"></a></td>
+								<td width="87"><a class="main_nav_7" href="<?=site_url('projects')?>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','<?=site_url('public/images/b04-b.jpg')?>',1)"><img src="<?=site_url('public/images/b04.jpg')?>" name="Image5" width="87" height="59" border="0"></a></td>
+								<td width="87"><a class="main_nav_8" href="<?=site_url('events')?>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','<?=site_url('public/images/b05-b.jpg')?>',1)"><img src="<?=site_url('public/images/b05.jpg')?>" name="Image6" width="87" height="59" border="0"></a></td>
+								<td width="85"><a class="main_nav_2" href="<?=site_url('knowledge')?>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','<?=site_url('public/images/b06-b.jpg')?>',1)"><img src="<?=site_url('public/images/b06.jpg')?>" name="Image7" width="85" height="59" border="0"></a></td>
 								<td><a href="<?=site_url('faq')?>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','<?=site_url('public/images/b07-b.jpg')?>',1)"><img src="<?=site_url('public/images/b07.jpg')?>" name="Image8" width="83" height="59" border="0"></a></td>
 							</tr>
 						</table></td>
@@ -85,8 +93,7 @@ body {
 					<tr>
 						<td height="31"><table width="500" cellspacing="0" cellpadding="0">
 							<tr>
-								<td width="15">&nbsp;</td>
-								<td>&nbsp;</td>
+								<td><?php $this->load->model('list_taxo_model');?></td>
 							</tr>
 						</table></td>
 					</tr>

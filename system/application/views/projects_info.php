@@ -7,7 +7,7 @@
 <?php
 if(count($pix)>0){
 	foreach($pix as $p):
-		echo "<a href='".site_url('public/files/images/'.$p->name)."' rel='fancy_group'><img src='".site_url('public/files/images/'.$p->name)."'></a>";
+		echo "<a href='".site_url('public/files/images/'.$p->name)."' rel='fancy_group' title=\"".$p->title."<br/><br/>".$p->content."\"><img src='".site_url('public/files/images/'.$p->name)."'></a>";
 	endforeach;
 }
 ?>

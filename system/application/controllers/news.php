@@ -5,6 +5,9 @@ class News extends Controller{
 		$this->db->select('a.*,b.name as tname');
 		$this->db->join('taxonomy as b','a.t_id = b.id','left');
 		$this->db->where('a.type_id',1);
+		if($this->uri->segment(3)){
+			$this->db->where('a.t_id',$this->uri->segment(3));
+		}
 		$this->db->order_by('a.id','DESC');
 		$query = $this->db->get('nodes as a');
 		$data = array();

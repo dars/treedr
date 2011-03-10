@@ -70,6 +70,7 @@ var faq_cm = new Ext.grid.ColumnModel([
 	{header:'id',dataIndex:'id',hidden:true},
 	{header:'類別',dataIndex:'tname'},
 	{header:'標題',dataIndex:'title',id:'faq_title'},
+	{header:'提問時間',dataIndex:'created',width:120},
 	{header:'更新時間',dataIndex:'modified',width:120}
 ]);
 var faq_grid = new Ext.grid.GridPanel({

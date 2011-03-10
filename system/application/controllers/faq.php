@@ -26,7 +26,7 @@ class Faq extends Controller{
 		$data['title_img'] = site_url("public/images/main/08faq/title.jpg");
 		$data['con'] = 'faq';
 		$pdata['page_title'] = '我要提問';
-		$pdata['page_content'] = $this->parser->parse('news_info',$data,true);
+		$pdata['page_content'] = $this->parser->parse('faq_info',$data,true);
 		$this->parser->parse('layout/main',$pdata);
 	}
 	function post(){
@@ -36,7 +36,7 @@ class Faq extends Controller{
 		$this->parser->parse('layout/main',$pdata);
 	}
 	function add_post(){
-		$this->db->set('title',$this->input->post('title').' -- '.$this->input->post('name'));
+		$this->db->set('title','「'.$this->input->post('name').'的提問」'.$this->input->post('title'));
 		$tmp_time = date('Y-m-d H:i:s');
 		$this->db->set('created',$tmp_time);
 		$this->db->set('modified',$tmp_time);
